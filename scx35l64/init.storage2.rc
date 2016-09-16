@@ -1,0 +1,20 @@
+######
+# for emulated internal and
+# external storage is primary
+# @{
+on boot
+    write /sys/class/android_usb/android0/f_mass_storage/board_support_luns 1
+on early-fs
+    export EXTERNAL_STORAGE /storage/sdcard0
+    export SECONDARY_STORAGE /storage/emulated/legacy
+
+    mkdir /storage/temp_sd 0700 root root
+    export TEMP_STORAGE /storage/temp_sd
+    symlink /storage/sdcard0 /sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
+    setprop persist.storage.type 1
+    setprop sys.tempsd.enable 1
+    setprop sys.internal.emulated 1
+# @}
+######
+

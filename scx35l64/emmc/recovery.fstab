@@ -1,0 +1,58 @@
+/dev/block/platform/sprd-sdhci.0/mmcblk1p1				/sdcard			vfat	defaults	defaults
+
+/dev/block/platform/sprd-sdhci.3/by-name/system			/system			ext4	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/userdata		/data			ext4	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/cache			/cache			ext4	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/misc			/misc			emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/boot			/boot			emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/recovery		/recovery		emmc	defaults	defaults
+
+/dev/block/platform/sprd-sdhci.3/by-name/tdmodem		/tdmodem		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/tddsp			/tddsp			emmc 	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/tdfixnv1		/tdfixnv1		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/tdfixnv2		/tdfixnv2		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/tdruntimenv1	/tdruntimenv1	emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/tdruntimenv2	/tdruntimenv2	emmc	defaults	defaults
+
+/dev/block/platform/sprd-sdhci.3/by-name/l_modem		/ltemodem		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/l_ldsp			/ltedsp			emmc 	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/l_fixnv1		/ltefixnv1		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/l_fixnv2		/ltefixnv2		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/l_runtimenv1	/lteruntimenv1	emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/l_runtimenv2	/lteruntimenv2	emmc	defaults	defaults
+
+/dev/block/platform/sprd-sdhci.3/by-name/lf_modem		/lfmodem		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/lf_warm		/lfwarm			emmc 	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/lf_gdsp		/lfgdsp			emmc 	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/lf_ldsp		/lfldsp			emmc 	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/lf_fixnv1		/lffixnv1		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/lf_fixnv2		/lffixnv2		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/lf_runtimenv1	/lfruntimenv1	emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/lf_runtimenv2	/lfruntimenv2	emmc	defaults	defaults
+
+/dev/block/platform/sprd-sdhci.3/by-name/tl_modem		/tlmodem		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/tl_tdsp		/tltdsp			emmc 	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/tl_ldsp		/tlldsp			emmc 	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/tl_fixnv1		/tlfixnv1		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/tl_fixnv2		/tlfixnv2		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/tl_runtimenv1	/tlruntimenv1	emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/tl_runtimenv2	/tlruntimenv2	emmc	defaults	defaults
+
+/dev/block/platform/sprd-sdhci.3/by-name/wmodem			/wmodem			emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/wdsp			/wdsp			emmc 	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/wfixnv1		/wfixnv1		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/wfixnv2		/wfixnv2		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/wruntimenv1	/wruntimenv1	emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/wruntimenv2	/wruntimenv2	emmc	defaults	defaults
+
+/dev/block/platform/sprd-sdhci.3/by-name/wcnfixnv1		/wcnfixnv1		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/wcnfixnv2		/wcnfixnv2		emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/wcnruntimenv1	/wcnruntimenv1	emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/wcnruntimenv2	/wcnruntimenv2	emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/wcnmodem		/wcnmodem		emmc	defaults	defaults
+
+/dev/block/platform/sprd-sdhci.3/by-name/prodnv			/productinfo	ext4	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/logo			/logo			emmc	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/fbootlogo		/fbootlogo		emmc	defaults	defaults
+/dev/block/mmcblk0boot1									/uboot			emmc	defaults	defaults
+/dev/block/mmcblk0boot0									/spl			emmc	defaults	defaults

@@ -1,0 +1,93 @@
+<!-- TinyHAL configuration file for GOD -->
+<tinyalsa-audio device="SC8830 audio">
+<!-- END OF MUST NOT modify private field directly -->
+
+<device name="builtin-mic">
+  <path name="on">
+     <ctl name="MIC Bias Switch" val="1" />
+  </path>
+  <path name="off">
+     <ctl name="MIC Bias Switch" val="0" />
+  </path>
+</device>
+
+<device name="back-mic">
+  <path name="on">
+     <ctl name="AUXMIC Bias Switch" val="1" />
+  </path>
+  <path name="off">
+     <ctl name="AUXMIC Bias Switch" val="0" />
+  </path>
+</device>
+
+<device name="headset-in">
+  <path name="on">
+     <ctl name="HEADMIC Bias Switch" val="1" />
+  </path>
+  <path name="off">
+     <ctl name="HEADMIC Bias Switch" val="0" />
+  </path>
+</device>
+
+<device name="line">
+  <path name="on">
+     <ctl name="HeadPhone Mute" val="1" />
+     <ctl name="ADCL Mixer AILADCL Switch" val="1" />
+     <ctl name="ADCR Mixer AIRADCR Switch" val="1" />
+     <ctl name="Line Function" val="1" />
+     <ctl name="HeadPhone Mute" val="0" />
+  </path>
+  <path name="off">
+     <ctl name="Line Function" val="0" />
+     <ctl name="ADCL Mixer AILADCL Switch" val="0" />
+     <ctl name="ADCR Mixer AIRADCR Switch" val="0" />
+  </path>
+</device>
+
+
+<device name="speaker">
+   <path name="on">
+     <ctl name="SPKL Mixer ADCLSPKL Switch" val="1" />
+     <ctl name="SPKL Mixer ADCRSPKL Switch" val="1" />
+     <ctl name="Speaker Function" val="1" />
+   </path>
+   <path name="off">
+     <ctl name="Speaker Function" val="0" />
+     <ctl name="SPKL Mixer ADCLSPKL Switch" val="0" />
+     <ctl name="SPKL Mixer ADCRSPKL Switch" val="0" />
+   </path>
+</device>
+
+<device name="headphone">
+   <path name="on">
+     <ctl name="HPL Mixer ADCRHPL Switch" val="1" />
+     <ctl name="HPR Mixer ADCLHPR Switch" val="1" />
+     <ctl name="HeadPhone Function" val="1" />
+   </path>
+   <path name="off">
+     <ctl name="HeadPhone Function" val="0" />
+     <ctl name="HPL Mixer ADCRHPL Switch" val="0" />
+     <ctl name="HPR Mixer ADCLHPR Switch" val="0" />
+   </path>
+</device>
+
+<device name="earpiece">
+   <path name="on">
+     <ctl name="Aud Loop in VBC Switch" val="1" />
+     <ctl name="Earpiece Function" val="1" />
+   </path>
+   <path name="off">
+     <ctl name="Aud Loop in VBC Switch" val="0" />
+     <ctl name="Earpiece Function" val="0" />
+   </path>
+</device>
+
+<device name="dual-mic-voice">
+   <path name="on">
+     <ctl name="ADCR Mixer AuxMICADCR Switch" val="0" />
+     <ctl name="ADCL Mixer MainMICADCL Switch" val="0" />
+   </path>
+   <path name="off">
+   </path>
+</device>
+</tinyalsa-audio>

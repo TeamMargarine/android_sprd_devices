@@ -1,0 +1,86 @@
+
+ro.sf.lcd_density=240
+ro.sf.lcd_width=54
+ro.sf.lcd_height=96
+ro.opengles.version=131072
+ro.product.hardware=SC9620OPENPHONE_V1.0.1
+
+debug.hwui.render_dirty_regions=false
+
+# Bluetooth OPP low speed for save power
+debug.bt.lowspeed=true
+
+persist.ttydev=ttyVUART0
+
+# delay for ConnectivityChange broadcast (ms)
+conn.connectivity_change_delay = 0
+
+ro.product.partitionpath=/dev/block/platform/sprd-sdhci.3/by-name/
+
+# Default ecclist
+ro.ril.ecclist=112,911,#911,*911
+
+persist.modem.t.enable=1
+persist.modem.t.nvp=td
+ro.modem.t.dev=/dev/cpt
+ro.modem.t.tty=/dev/spimux
+ro.modem.t.eth=veth_spi
+ro.modem.t.snd=1
+ro.modem.t.diag=/dev/spimux22
+ro.modem.t.log=/dev/spimux23
+ro.modem.t.loop=/dev/unknown
+ro.modem.t.nv=/dev/spimux20
+ro.modem.t.assert=/dev/ttyS2
+ro.modem.t.vbc=/dev/spimux21
+ro.modem.t.id=0
+ro.modem.t.count=1
+ro.modem.t.fixnv_size=0x20000
+ro.modem.t.runnv_size=0x40000
+
+persist.modem.l.enable=1
+ro.modem.l.id=1
+ro.modem.l.count=1
+ro.modem.l.dev=/dev/cpl
+ro.modem.l.tty=/dev/sdiomux
+ro.modem.l.eth=veth_sdio
+ro.modem.l.snd=2
+ro.modem.l.diag=/dev/sdiomux22
+ro.modem.l.log=/dev/sdiomux23
+ro.modem.l.loop=/dev/unknown
+ro.modem.l.assert=/dev/ttyS3
+ro.modem.l.vbc=/dev/sdiomux21
+ro.modem.l.nv=/dev/sdiomux20
+ro.modem.l.fixnv_size=0x20000
+ro.modem.l.runnv_size=0x40000
+ro.modem.l.nvp=l_
+ro.modem.lf.nvp=l_
+ro.modem.tl.nvp=l_
+
+ro.modem.wcn.enable=1
+ro.modem.wcn.dev=/dev/cpwcn
+ro.modem.wcn.tty=/deiv/stty_wcn
+ro.modem.wcn.diag=/dev/slog_wcn
+ro.modem.wcn.assert=/dev/spipe_wcn2
+ro.modem.wcn.id=1
+ro.modem.wcn.count=1
+camera.disable_zsl_mode=1
+ro.digital.fm.support=1
+persist.sys.engpc.disable=1
+
+# SPRD: add low cost low memory @{
+ro.config.low_ram=true
+# @}
+
+#ro.config.ksm.support=true
+
+#zram config
+ro.config.zram.support=true
+ro.board_ram_size=mid
+
+#if our product not support bt and softap coexist
+ro.btwifisoftap.coexist=false
+
+# hotspot development
+ro.hotspot.enabled=1
+# SPRD: add support hwrotation
+ro.sf.hwrotation=0

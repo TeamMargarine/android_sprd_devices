@@ -1,0 +1,2 @@
+on cali
+    insmod /system/lib/modules/focaltech_ts.ko

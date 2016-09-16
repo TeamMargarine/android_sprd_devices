@@ -1,0 +1,58 @@
+/dev/block/platform/sprd-sdhci.0/mmcblk0p1				/sdcard			vfat	defaults	defaults
+
+system			/system			ubifs	defaults	defaults
+userdata		/data			ubifs	defaults	defaults
+cache			/cache			ubifs	defaults	defaults
+misc			/misc			ubi		defaults	defaults
+boot			/boot			ubi		defaults	defaults
+recovery		/recovery		ubi		defaults	defaults
+
+tdmodem			/tdmodem		ubi		defaults	defaults
+tddsp			/tddsp			ubi 	defaults	defaults
+tdfixnv1		/tdfixnv1		ubi		defaults	defaults
+tdfixnv2		/tdfixnv2		ubi		defaults	defaults
+tdruntimenv1	/tdruntimenv1	ubi		defaults	defaults
+tdruntimenv2	/tdruntimenv2	ubi		defaults	defaults
+
+l_modem			/ltemodem		ubi		defaults	defaults
+l_ldsp			/ltedsp			ubi 	defaults	defaults
+l_fixnv1		/ltefixnv1		ubi		defaults	defaults
+l_fixnv2		/ltefixnv2		ubi		defaults	defaults
+l_runtimenv1	/lteruntimenv1	ubi		defaults	defaults
+l_runtimenv2	/lteruntimenv2	ubi		defaults	defaults
+
+lf_modem		/lfmodem		ubi		defaults	defaults
+lf_warm			/lfwarm			ubi 	defaults	defaults
+lf_gdsp			/lfgdsp			ubi 	defaults	defaults
+lf_ldsp			/lfldsp			ubi 	defaults	defaults
+lf_fixnv1		/lffixnv1		ubi		defaults	defaults
+lf_fixnv2		/lffixnv2		ubi		defaults	defaults
+lf_runtimenv1	/lfruntimenv1	ubi		defaults	defaults
+lf_runtimenv2	/lfruntimenv2	ubi		defaults	defaults
+
+tl_modem		/tlmodem		ubi		defaults	defaults
+tl_tdsp			/tltdsp			ubi 	defaults	defaults
+tl_ldsp			/tlldsp			ubi 	defaults	defaults
+tl_fixnv1		/tlfixnv1		ubi		defaults	defaults
+tl_fixnv2		/tlfixnv2		ubi		defaults	defaults
+tl_runtimenv1	/tlruntimenv1	ubi		defaults	defaults
+tl_runtimenv2	/tlruntimenv2	ubi		defaults	defaults
+
+wmodem			/wmodem			ubi		defaults	defaults
+wdsp			/wdsp			ubi 	defaults	defaults
+wfixnv1			/wfixnv1		ubi		defaults	defaults
+wfixnv2			/wfixnv2		ubi		defaults	defaults
+wruntimenv1		/wruntimenv1	ubi		defaults	defaults
+wruntimenv2		/wruntimenv2	ubi		defaults	defaults
+
+wcnfixnv1		/wcnfixnv1		ubi		defaults	defaults
+wcnfixnv2		/wcnfixnv2		ubi		defaults	defaults
+wcnruntimenv1	/wcnruntimenv1	ubi		defaults	defaults
+wcnruntimenv2	/wcnruntimenv2	ubi		defaults	defaults
+wcnmodem		/wcnmodem		ubi		defaults	defaults
+
+prodnv			/productinfo	ubifs	defaults	defaults
+logo			/logo			ubi		defaults	defaults
+fbootlogo		/fbootlogo		mtd		defaults	defaults
+2ndbl			/uboot			mtd		defaults	defaults
+spl				/spl			mtd		defaults	defaults

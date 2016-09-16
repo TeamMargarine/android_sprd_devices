@@ -1,0 +1,59 @@
+
+ro.sf.lcd_density=240
+ro.sf.lcd_width=54
+ro.sf.lcd_height=96
+ro.opengles.version=131072
+ro.product.hardware=SP8815GA_V1.0.0
+
+debug.hwui.render_dirty_regions=false
+
+persist.ttydev=ttyVUART0
+
+# delay for ConnectivityChange broadcast (ms)
+conn.connectivity_change_delay = 0
+
+ro.product.partitionpath=/dev/ubi0_
+
+# Default ecclist
+ro.ril.ecclist=112,911,#911,*911
+
+persist.modem.t.enable=1
+persist.modem.t.nvp=td
+ro.modem.t.dev=/dev/cpt
+ro.modem.t.tty=/dev/stty_td
+ro.modem.t.eth=seth_td
+ro.modem.t.snd=1
+ro.modem.t.diag=/dev/slog_td
+ro.modem.t.loop=/dev/spipe_td0
+ro.modem.t.nv=/dev/spipe_td1
+ro.modem.t.assert=/dev/spipe_td2
+ro.modem.t.vbc=/dev/spipe_td6
+ro.modem.t.id=0
+ro.modem.t.fixnv_size=0x40000
+ro.modem.t.runnv_size=0x60000
+
+ro.modem.wcn.enable=1
+ro.modem.wcn.dev=/dev/cpwcn
+ro.modem.wcn.tty=/deiv/stty_wcn
+ro.modem.wcn.diag=/dev/slog_wcn
+ro.modem.wcn.assert=/dev/spipe_wcn2
+ro.modem.wcn.id=1
+ro.modem.wcn.count=1
+camera.disable_zsl_mode=1
+ro.digital.fm.support=1
+
+# SPRD: add low cost low memory @{
+ro.config.low_ram=true
+# @}
+
+#zram config
+ro.config.zram.support=true
+ro.board_ram_size=low
+
+#if our product not support bt and softap coexist
+ro.btwifisoftap.coexist=false
+
+# hotspot development
+ro.hotspot.enabled=1
+# SPRD: add support hwrotation
+ro.sf.hwrotation=0

@@ -1,0 +1,91 @@
+
+ro.sf.lcd_density=240
+ro.sf.lcd_width=54
+ro.sf.lcd_height=96
+ro.opengles.version=131072
+ro.product.hardware=SP9830A-4_V1.1.0
+ro.cucc.buildversion=enabled
+ro.cucc.display.buildversion=KTU84P test-keys
+ro.product.modem.mode=GSM,EDGE,WCDMA,TD-LTE,FDD-LTE
+
+debug.hwui.render_dirty_regions=false
+# Bluetooth OPP low speed for save power
+debug.bt.lowspeed=true
+
+persist.ttydev=ttyVUART0
+
+# delay for ConnectivityChange broadcast (ms)
+conn.connectivity_change_delay = 0
+
+ro.product.partitionpath=/dev/block/platform/sprd-sdhci.3/by-name/
+
+# Default ecclist
+ro.ril.ecclist=112,911,#911,*911
+persist.modem.t.enable=0
+ro.modem.t.dev=/proc/cpgge/
+ro.modem.t.tty=/dev/stty_gge0
+ro.modem.t.eth=seth_gge
+ro.modem.t.snd=1
+ro.modem.t.diag=/dev/slog_gge
+ro.modem.t.log=/dev/slog_gge
+ro.modem.t.loop=/dev/spipe_gge0
+ro.modem.t.nv=/dev/spipe_gge1
+ro.modem.t.assert=/dev/spipe_gge2
+ro.modem.t.vbc=/dev/spipe_gge6
+ro.modem.t.id=0
+ro.modem.t.fixnv_size=0x20000
+ro.modem.t.runnv_size=0x40000
+persist.modem.t.nvp=g_
+persist.modem.tl.enable=0
+ro.modem.tl.dev=/proc/cptl/
+ro.modem.tl.tty=/dev/stty_lte
+ro.modem.tl.eth=seth_lte
+ro.modem.tl.snd=1
+ro.modem.tl.diag=/dev/sdiag_lte
+ro.modem.tl.log=/dev/slog_lte
+ro.modem.tl.loop=/dev/spipe_lte0
+ro.modem.tl.nv=/dev/spipe_lte1
+ro.modem.tl.assert=/dev/spipe_lte2
+ro.modem.tl.vbc=/dev/spipe_lte6
+ro.modem.tl.id=0
+ro.modem.tl.fixnv_size=0x40000
+ro.modem.tl.runnv_size=0x60000
+persist.modem.tl.nvp=tl_
+
+persist.modem.lf.enable=1
+ro.modem.lf.dev=/proc/cptl/
+ro.modem.lf.tty=/dev/stty_lte
+ro.modem.lf.eth=seth_lte
+ro.modem.lf.snd=1
+ro.modem.lf.diag=/dev/sdiag_lte
+ro.modem.lf.log=/dev/slog_lte
+ro.modem.lf.loop=/dev/spipe_lte0
+ro.modem.lf.nv=/dev/spipe_lte1
+ro.modem.lf.assert=/dev/spipe_lte2
+ro.modem.lf.vbc=/dev/spipe_lte6
+ro.modem.lf.id=0
+ro.modem.lf.fixnv_size=0x40000
+ro.modem.lf.runnv_size=0x60000
+persist.modem.lf.nvp=wl_
+ro.modem.wcn.enable=1
+ro.modem.wcn.dev=/dev/cpwcn
+ro.modem.wcn.tty=/deiv/stty_wcn
+ro.modem.wcn.diag=/dev/slog_wcn
+ro.modem.wcn.assert=/dev/spipe_wcn2
+ro.modem.wcn.id=1
+ro.modem.wcn.count=1
+camera.disable_zsl_mode=1
+ro.digital.fm.support=1
+
+ro.config.ksm.support=true
+
+#zram config
+ro.config.zram.support=true
+ro.board_ram_size=mid
+# SPRD: add low cost low memory @{
+ro.config.low_ram=true
+# @}
+
+# SPRD: add support gps @{
+ro.config.support_gps=false
+# @}

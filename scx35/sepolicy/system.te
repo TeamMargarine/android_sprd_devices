@@ -1,0 +1,2 @@
+allow system zygote:binder impersonate;
+allow system wallpaper_file:file relabelto;
