@@ -1,0 +1,109 @@
+on early-init
+    start ueventd
+
+on init
+    export PATH /system/bin:/sbin
+    export ANDROID_ROOT /system
+    export ANDROID_DATA /data
+    export EXTERNAL_STORAGE /sdcard
+
+    symlink /system/etc /etc
+
+    mkdir /sdcard
+    mkdir /system
+    mkdir /data
+    mkdir /cache
+    mount /tmp /tmp tmpfs
+
+    chown root shell /tmp
+    chmod 0775 /tmp
+
+mkdir /productinfo 0777 system system
+
+    symlink /dev/slog_td /dev/vbpipe0
+    symlink /dev/spipe_td1 /dev/vbpipe1
+    symlink /dev/spipe_td2 /dev/vbpipe2
+    symlink /dev/spipe_td3 /dev/vbpipe3
+    symlink /dev/spipe_td6 /dev/vbpipe6
+
+
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/bcdDevice 2427
+    write /sys/class/android_usb/android0/idVendor 1782
+    write /sys/class/android_usb/android0/idProduct 4d00
+    write /sys/class/android_usb/android0/functions vser
+    write /sys/class/android_usb/android0/iManufacturer Spreadtrum
+    write /sys/class/android_usb/android0/iProduct "Gadget Serial"
+    write /sys/class/android_usb/android0/iSerial 19761202
+    write /sys/class/android_usb/android0/enable 1
+
+on fs
+   mount_all /fstab.sc8830
+
+on post-fs
+    write /sys/devices/platform/sprd-sdhci.3/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0boot0/force_ro 0
+    write /sys/devices/platform/sprd-sdhci.3/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0boot1/force_ro 0
+    chown system system /productinfo/adc.bin
+on boot
+
+    ifup lo
+    hostname localhost
+    domainname localdomain
+
+    class_start default
+# SPRD: add adb in recovery @{
+on adb_enable
+    write /sys/class/android_usb/android0/iManufacturer Spreadtrum
+    write /sys/class/android_usb/android0/iProduct Spreadtrum Phone
+    write /sys/class/android_usb/android0/iSerial $ro.serialno
+    write /sys/class/android_usb/android0/f_rndis/manufacturer Spreadtrum
+    write /sys/class/android_usb/android0/f_rndis/vendorID 8
+    write /sys/class/android_usb/android0/f_rndis/wceis 1
+
+    setprop sys.usb.config adb,vser,gser
+# @}
+service ueventd /sbin/ueventd
+    critical
+
+service recovery /sbin/recovery
+
+service adbd /sbin/adbd recovery
+  disabled
+
+# Always start adbd on not cali mode
+on property:sys.usb.config=adb,vser,gser
+# SPRD: add adb in recovery @{
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 1782
+    write /sys/class/android_usb/android0/idProduct 5d06
+    write /sys/class/android_usb/android0/functions adb,vser,gser
+# @}
+    write /sys/class/android_usb/android0/enable 1
+    start adbd
+    setprop sys.usb.state $sys.usb.config
+
+# Restart adbd so it can run as root
+on property:service.adb.root=1
+    write /sys/class/android_usb/android0/enable 0
+    restart adbd
+    write /sys/class/android_usb/android0/enable 1
+
+on cali
+    class_start cali
+
+service engpcclient /system/bin/engpc
+    class cali
+    user root
+    group root
+
+#nvitemd
+service nvitemd_td /bin/nvitemd /dev/spipe_td1 ./nvitem_td.cfg    TRUE
+    class cali
+    user root
+    group root
+
+service nvitemd_w /bin/nvitemd /dev/spipe_w1 ./nvitem_w.cfg        TRUE
+    class cali
+    user root
+    group root
+

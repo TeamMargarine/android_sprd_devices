@@ -1,0 +1,15 @@
+
+ro.sf.lcd_density=320
+ro.sf.lcd_width=54
+ro.sf.lcd_height=96
+ro.opengles.version=131072
+ro.product.hardware=SP8830EB_V1.0.1
+
+debug.hwui.render_dirty_regions=false
+
+persist.ttydev=ttyVUART0
+
+# delay for ConnectivityChange broadcast (ms)
+conn.connectivity_change_delay = 0
+
+ro.product.partitionpath=/dev/block/platform/sprd-sdhci.3/by-name/

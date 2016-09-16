@@ -1,0 +1,22 @@
+# <device>                        		<mnt_point>     	<type>    		<mnt_flags and options>       <fs_mgr_flags>		<extract dir>
+/dev/block/platform/sprd-sdhci.0/mmcblk1p1				/sdcard			vfat	defaults	defaults	
+/dev/block/platform/sprd-sdhci.3/by-name/system			/system			ext4	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/userdata		/data			ext4	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/cache			/cache			ext4	defaults	defaults
+/dev/block/platform/sprd-sdhci.3/by-name/misc			/misc			emmc	defaults	defaults		
+/dev/block/platform/sprd-sdhci.3/by-name/boot			/boot			emmc	defaults	defaults	
+/dev/block/platform/sprd-sdhci.3/by-name/recovery		/recovery		emmc	defaults	defaults				
+/dev/block/platform/sprd-sdhci.3/by-name/tdmodem		/tdmodem		emmc	defaults	defaults	#/sdcard		
+/dev/block/platform/sprd-sdhci.3/by-name/tddsp			/tddsp			emmc 	defaults	defaults 	#/sdcard		
+/dev/block/platform/sprd-sdhci.3/by-name/tdfixnv1		/tdfixnv1		emmc	defaults	defaults	#/sdcard		
+/dev/block/platform/sprd-sdhci.3/by-name/tdfixnv2		/tdfixnv2		emmc	defaults	defaults	#/sdcard		
+/dev/block/platform/sprd-sdhci.3/by-name/tdruntimenv1	/tdruntimenv1	emmc	defaults	defaults	#/sdcard
+/dev/block/platform/sprd-sdhci.3/by-name/tdruntimenv2	/tdruntimenv2	emmc	defaults	defaults	#/sdcard							
+/dev/block/platform/sprd-sdhci.3/by-name/prodinfo1		/prodinfo1		ext4	defaults	defaults							
+/dev/block/platform/sprd-sdhci.3/by-name/prodinfo2		/prodinfo2		ext4	defaults	defaults		
+/dev/block/platform/sprd-sdhci.3/by-name/prodinfo3		/prodinfo3		ext4	defaults	defaults		
+/dev/block/platform/sprd-sdhci.3/by-name/logo			/logo			emmc	defaults	defaults	
+/dev/block/platform/sprd-sdhci.3/by-name/fbootlogo		/fbootlogo		emmc	defaults	defaults	
+/dev/block/platform/sprd-sdhci.3/by-name/prodinfo4		/prodinfo4		ext4	defaults	defaults		
+/dev/block/mmcblk0boot1									/uboot			emmc	defaults	defaults
+/dev/block/mmcblk0boot0									/spl			emmc	defaults	defaults	#/sdcard													
