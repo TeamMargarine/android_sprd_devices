@@ -1,0 +1,72 @@
+源码下载地址 http://people.redhat.com/anderson/
+
+
+下载完以后还得改地址偏移量，
+tiger中kernel的虚拟地址(0xc0000000开始)和物理地址(0x80000000开始)差0x40000000。
+7710项目中偏差为0xc000000
+
+--- a/arm.c
++++ b/arm.c
+@@ -1113,12 +1113,20 @@ arm_kvtop(struct task_context *tc, ulong kvaddr, physaddr_t *paddr, int verbose)
+                return FALSE;
+ 
+        if (!vt->vmalloc_start) {
++#if 0         
+                *paddr = VTOP(kvaddr);
++#else     /* For SC8825 Tiger235 EA, the offset for vaddr and paddr is 0x4000 0000 */
++               *paddr = kvaddr - 0x40000000;
++#endif
+                return TRUE;
+        }
+ 
+        if (!IS_VMALLOC_ADDR(kvaddr)) {
++#if 0         
+                *paddr = VTOP(kvaddr);
++#else  /* For SC8825 Tiger235 EA, the offset for vaddr and paddr is 0x4000 0000 */
++               *paddr = kvaddr - 0x40000000;
++#endif
+                if (!verbose)
+                        return TRUE;
+        }
+
+
+编译完以后源码目录里会生成可执行程序crash，可直接在linux下运行。
+
+运行方式：
+crash file.elf vmlinux 
+或者 
+
+crash vmlinux file.elf
+
+
+运行过程中可能会报出如下的错误，
+
+crash: error while loading shared libraries: libtinfo.so.5: cannot open shared object file: No such file or directory
+
+解决方法
+
+1、拷贝别的机器上的libtinfo.so库到本机上
+/usr/lib32/libtinfo.so.5
+/usr/lib32/libtinfo.so.5.9
+
+
+2、编译64位的crash工具
+源码默认是编译成32位的，得改Makefile。
+
+GDB_CONF_FLAGS=--target=arm-elf-linux CFLAGS=-m32
+
+ARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/)
+
+ifeq (${ARCH}, ppc64)
+CONF_FLAGS = -m64
+endif
+
+#新增代码--->
+ifeq (${ARCH}, x86_64)
+CONF_FLAGS = -m64
+endif
+#<---
+
+
+
+

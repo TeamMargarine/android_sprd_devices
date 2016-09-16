@@ -1,0 +1,58 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<resources
+xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="preferred_network_mode_choices">
+        <item></item>
+        <item>"Chỉ GSM"</item>
+        <item>"Tự động"</item>
+    </string-array>
+    <string-array name="preferred_network_mode_choices_wcdma">
+        <item></item>
+        <item>"Chỉ GSM"</item>
+        <item>"Tự động"</item>
+    </string-array>
+    <string-array name="preferred_network_mode_values">
+        <item></item>
+        <item>"1"</item>
+        <item>"0"</item>
+    </string-array>
+    <string-array name="amplitude_arr">
+    	<item></item>
+    	<item></item>
+    	<item></item>
+    	<item></item>
+    	<item>"3"</item>
+    	<item>"5"</item>
+    	<item>6</item>
+    	<item>"7"</item>
+    	<item>8</item>
+    	<item>"9"</item>
+    	<item>10</item>
+    	<item></item>
+    	<item></item>
+    	<item></item>
+    	<item></item>
+    	<item>"15"</item>
+    	<item></item>
+    </string-array>
+    <string-array name="channel_arr">
+    	<item></item>
+    	<item></item>
+    	<item></item>
+    	<item>"3"</item>
+    	<item>"5"</item>
+    	<item>6</item>
+    	<item>"7"</item>
+    	<item>8</item>
+    	<item>"9"</item>
+    	<item>10</item>
+    	<item></item>
+    	<item></item>
+    	<item></item>
+    	<item></item>
+    </string-array>
+    <string-array name="modem_arm_log_values">
+    	<item></item>
+    	<item>"2"</item>
+    </string-array>
+</resources>

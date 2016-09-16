@@ -1,0 +1,5 @@
+Usage:
+	Under windows os double Click script "LogAndroid2PC.bat" while DUT is connect to PC after test.
+	Under linux os double Click script "LogAndroid2PC.sh" and select "run in terminal" while DUT is connect to PC after test.
+	logs store on folder:
+		logs/androidlog_<datetoseconds>_<board>_<type>
