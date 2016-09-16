@@ -1,0 +1,77 @@
+LOCAL_PATH:= $(call my-dir)
+
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE := ES_File_Explorer.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_PATH := $(TARGET_OUT)/preloadapp
+LOCAL_SRC_FILES := ES_File_Explorer_V1_6_2_5_Spreadtrum_cucc_20130813.apk
+
+include $(BUILD_PREBUILT)
+
+#include $(CLEAR_VARS)
+
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE := SecondClock.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_MODULE_PATH := $(TARGET_OUT)/preloadapp
+#LOCAL_SRC_FILES := Stopwatch_serverV1.0.0.7.apk
+
+#include $(BUILD_PREBUILT)
+
+#include $(CLEAR_VARS)
+
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE := WorldCLOCk.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_MODULE_PATH := $(TARGET_OUT)/preloadapp
+#LOCAL_SRC_FILES := WorldClock1105-Rev1.3.6_withAds.apk
+
+#include $(BUILD_PREBUILT)
+
+#include $(CLEAR_VARS)
+
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE := Operamini.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_MODULE_PATH := $(TARGET_OUT)/preloadapp
+#LOCAL_SRC_FILES := Operamini.apk
+
+#include $(BUILD_PREBUILT)
+
+
+#include $(CLEAR_VARS)
+
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE := libom.so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_SRC_FILES := libom.so
+
+#include $(BUILD_PREBUILT)
+
+#include $(CLEAR_VARS)
+
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE := FMPlayer.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_SRC_FILES := FMPlayer.apk 
+
+#include $(BUILD_PREBUILT)
+
+
+#include $(CLEAR_VARS)
+
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE := FaceBook.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_SRC_FILES := FBAndroid-1.9.7-preload.apk 
+
+#include $(BUILD_PREBUILT)

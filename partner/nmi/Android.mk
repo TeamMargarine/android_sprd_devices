@@ -1,0 +1,45 @@
+LOCAL_PATH:= $(call my-dir)
+
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE := NmiAtv.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_SRC_FILES := app/NmiAtv.apk
+
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE := libjniNtvDev.so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_SRC_FILES := lib/libjniNtvDev.so
+
+include $(BUILD_PREBUILT)
+
+#include $(CLEAR_VARS)
+
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE := NmiFm.apk
+#LOCAL_MODULE_CLASS := APPS
+#LOCAL_CERTIFICATE := PRESIGNED
+#LOCAL_SRC_FILES := app/NmiFm.apk
+
+#include $(BUILD_PREBUILT)
+
+#include $(CLEAR_VARS)
+
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE := libjniFmDev.so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_SRC_FILES := lib/libjniFmDev.so
+
+#include $(BUILD_PREBUILT)
+
+
+
+
+

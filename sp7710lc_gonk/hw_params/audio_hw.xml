@@ -1,0 +1,10 @@
+<!-- SPRD audio params configuration file,include cp,mocor,pcm config -->
+<audio device="sprd-audio">
+<!-- the profile -->
+<modem num="1">
+	<cp name="t" pipe="/dev/vbpipe6" vbchannel="0" />
+</modem>
+
+</audio>
+
+

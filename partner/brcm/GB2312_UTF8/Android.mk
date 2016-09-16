@@ -1,0 +1,15 @@
+ifeq ($(BOARD_WLAN_DEVICE), bcmdhd)
+LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_ARM_MODE := arm
+LOCAL_SRC_FILES := libgb2312.so
+LOCAL_MODULE:= libgb2312
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+LOCAL_MODULE_TAGS := debug
+LOCAL_PRELINK_MODULE := false
+
+include $(BUILD_PREBUILT)
+endif
